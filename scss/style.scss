@@ -1570,20 +1570,22 @@ body {
     flex-direction: column;
     align-items: center;
   }
+
+  .solutions__title {
+    font-size: 34px;
+  }
+  
+  
+  .solutions__content-list {
+    grid-template: repeat(6, 1fr) / repeat(1, 1fr);
+  }
+  
+  .solutions__list-item {
+    transform: scale(0.95);
+  }
 }
 
-.solutions__title {
-  font-size: 34px;
-}
 
-
-.solutions__content-list {
-  grid-template: repeat(6, 1fr) / repeat(1, 1fr);
-}
-
-.solutions__list-item {
-  transform: scale(0.95);
-}
 
 //============================ 800================================
 //============================ 800================================
