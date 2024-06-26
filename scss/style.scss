@@ -1280,8 +1280,8 @@ body {
 
   &::before {
     content: "";
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     display: inline-block;
     background-color: $global-primary;
     border-radius: 100%;
@@ -1314,10 +1314,25 @@ body {
 
 .portfolio__img {}
 
-.potfolio__img-link{
+.potfolio__img-link {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 30px;
+  bottom: 20px;
+  transform: scale(2);
+
+  path {
+    transition: all .3s;
+  }
+
+  &:hover path {
+    fill: #000;
+  }
+
+  svg path {
+    fill: $global-primary;
+
+
+  }
 }
 
 .portfolio__row {
@@ -1337,6 +1352,21 @@ body {
 //==================== BREAK POINTS======================
 //==================== BREAK POINTS======================
 //==================== BREAK POINTS======================
+
+
+//============================ 1200================================
+//============================ 1200================================
+
+
+@media(max-width:1200px) {
+  .solutions__content-list {
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  }
+}
+
+
+//============================ 1200================================
+//============================ 1200================================
 
 
 //============================ 1100================================
@@ -1459,10 +1489,32 @@ body {
     margin-left: 0px;
   }
 
+  .portfolio__title {
+    text-align: center;
+  }
+
+  .portfolio__content-item {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .portfolio__descr-title {
+    text-align: center;
+  }
+
+  .portfolio__inner {
+    margin-top: 0px;
+  }
+
+  .portfolio__img-box{
+    margin-right: 0;
+  }
 }
 
 //============================ 1000================================
 //============================ 1000================================
+
 
 
 //============================ 800================================
@@ -1520,7 +1572,18 @@ body {
   }
 }
 
+.solutions__title {
+  font-size: 34px;
+}
 
+
+.solutions__content-list {
+  grid-template: repeat(6, 1fr) / repeat(1, 1fr);
+}
+
+.solutions__list-item {
+  transform: scale(0.95);
+}
 
 //============================ 800================================
 //============================ 800================================
@@ -1590,8 +1653,25 @@ body {
     font-size: 16px;
   }
 
+  .solutions__title {
+    font-size: 28px;
+  }
+  
+  .portfolio__img-box{
+    transform: scale(.75);
+  }
 
+  .portfolio__list-item{
+    &::before{
+      width: 10px;
+      height: 10px;
+      overflow: hidden;
+    }
+  }
 }
+
+
+
 
 //============================ 500================================
 //============================ 500================================

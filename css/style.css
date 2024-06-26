@@ -1405,8 +1405,8 @@ body {
 }
 .portfolio__list-item::before {
   content: "";
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   display: inline-block;
   background-color: #2e4fd7;
   border-radius: 100%;
@@ -1438,6 +1438,25 @@ body {
   -webkit-box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.25);
   border-radius: 20px;
+  position: relative;
+}
+
+.potfolio__img-link {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+.potfolio__img-link path {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.potfolio__img-link:hover path {
+  fill: #000;
+}
+.potfolio__img-link svg path {
+  fill: #2e4fd7;
 }
 
 .portfolio__row {
@@ -1447,6 +1466,13 @@ body {
   margin: 65px 0px;
 }
 
+@media (max-width: 1200px) {
+  .solutions__content-list {
+    -ms-grid-rows: (1fr)[3];
+    -ms-grid-columns: (1fr)[2];
+        grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+  }
+}
 @media (max-width: 1100px) {
   .story__slide-img,
   .story__slider-wrapper {
@@ -1538,6 +1564,28 @@ body {
   .main__process {
     margin-left: 0px;
   }
+  .portfolio__title {
+    text-align: center;
+  }
+  .portfolio__content-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 0;
+  }
+  .portfolio__descr-title {
+    text-align: center;
+  }
+  .portfolio__inner {
+    margin-top: 0px;
+  }
+  .portfolio__img-box {
+    margin-right: 0;
+  }
 }
 @media (max-width: 800px) {
   .header__nav-list:first-child,
@@ -1592,6 +1640,21 @@ body {
             align-items: center;
   }
 }
+.solutions__title {
+  font-size: 34px;
+}
+
+.solutions__content-list {
+  -ms-grid-rows: (1fr)[6];
+  -ms-grid-columns: (1fr)[1];
+      grid-template: repeat(6, 1fr)/repeat(1, 1fr);
+}
+
+.solutions__list-item {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
 @media (max-width: 600px) {
   .header__img-box {
     -webkit-transform: scale(0.75);
@@ -1633,5 +1696,17 @@ body {
   }
   .benefits__text {
     font-size: 16px;
+  }
+  .solutions__title {
+    font-size: 28px;
+  }
+  .portfolio__img-box {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  .portfolio__list-item::before {
+    width: 10px;
+    height: 10px;
+    overflow: hidden;
   }
 }
