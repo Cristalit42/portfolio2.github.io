@@ -625,6 +625,7 @@ body {
   font-size: 18px;
   line-height: 156%;
   color: #fff;
+  margin-bottom: 20px;
 }
 
 .footer__descr-text {
@@ -1439,6 +1440,19 @@ body {
           box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.portfolio__img-box:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.portfolio__img-box:hover path {
+  fill: #000;
+}
+
+.portfolio__img {
+  border-radius: 20px;
 }
 
 .potfolio__img-link {
