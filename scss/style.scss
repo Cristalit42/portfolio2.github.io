@@ -1246,6 +1246,7 @@ body {
 
 .portfolio__title {
   @include text-style (700, 52px, 119%, $base-text-primary);
+  text-align: center;
 }
 
 
@@ -1291,6 +1292,15 @@ body {
 .portfolio__list-content {
   margin-top: -5px;
   margin-left: 20px;
+
+  a{
+    color: #2e4fd7;
+    transition: all .3s;
+
+    &:hover{
+      color: #000;
+    }
+  }
 }
 
 .portfolio__list-title {

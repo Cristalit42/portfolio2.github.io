@@ -1368,6 +1368,7 @@ body {
   font-size: 52px;
   line-height: 119%;
   color: #191919;
+  text-align: center;
 }
 
 .portfolio__content-item {
@@ -1416,6 +1417,14 @@ body {
 .portfolio__list-content {
   margin-top: -5px;
   margin-left: 20px;
+}
+.portfolio__list-content a {
+  color: #2e4fd7;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.portfolio__list-content a:hover {
+  color: #000;
 }
 
 .portfolio__list-title {
